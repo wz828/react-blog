@@ -23,6 +23,9 @@
 	    └── reducer Redux-reducer文件
 ```
 
+客户端：React+Redux+wabpack
+服务端：Koa
+
 
 
 
