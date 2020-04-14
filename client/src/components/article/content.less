@@ -1,0 +1,144 @@
+@import '../../style/variables';
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  .post-title {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #101010;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .post-meta {
+    margin-top: 0;
+    //.attr:not(:last-child)::after{
+    //  content: "|"
+    //}
+    margin-bottom: 20px;
+    text-align: center;
+    span,
+    a {
+      color: #999;
+      font-weight: 300;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .attr {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.post-content {
+  color: #333;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  text-indent: 2em;
+
+  blockquote {
+    margin-right: 2em;
+    margin-left: 2em;
+    padding-right: 0;
+    padding-left: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+  }
+  a {
+    color: @link-color;
+    text-decoration: none;
+  }
+  p {
+    color: @main-font-color;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-indent: 2em;
+    img {
+      width: 80%;
+    }
+  }
+  ul,
+  ol {
+    padding-left: 2em;
+
+    li {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: @main-font-color;
+      font-size: 15px;
+      line-height: 30px;
+      list-style: none;
+      &::before {
+        content: '• ';
+      }
+    }
+  }
+
+  pre {
+    padding: 10px;
+    text-indent: 0;
+    //overflow: scroll;
+    //background-color: @back-dark-grey;
+    code {
+      color: grey;
+      line-height: 175%;
+    }
+  }
+
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: @main-font-color-dark;
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: @main-font-color-dark;
+  }
+
+  h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: @main-font-color-dark;
+  }
+
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: @main-font-color-dark;
+  }
+
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: @main-font-color-dark;
+  }
+
+  h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: @main-font-color-dark;
+  }
+}
+
+#comment-container {
+  text-indent: 0;
+}
+
+.post-content li p {
+  display: inline;
+}

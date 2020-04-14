@@ -1,0 +1,46 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'prettier',
+    'prettier/react',
+    'eslint:recommended',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    React: true,
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    project: './jsconfig.json',
+  },
+  plugins: ['react'],
+  parser: 'babel-eslint',
+  rules: {
+    'no-unused-vars': [1],
+    'import/no-unresolved': [0],
+    'import/prefer-default-export': [0],
+    'react/destructuring-assignment': [0],
+    'react/prop-types': [0],
+    'react/no-access-state-in-setstate': [0],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/prefer-stateless-function': [1],
+    'import/no-extraneous-dependencies': [1],
+    'jsx-a11y/no-noninteractive-element-interactions': [0],
+    'jsx-a11y/click-events-have-key-events': [0],
+    'jsx-a11y/no-static-element-interactions': [0],
+    'jsx-a11y/anchor-is-valid': [0],
+    'jsx-a11y/label-has-associated-control': [1],
+    'jsx-a11y/label-has-for': [1],
+    'jsx-a11y/media-has-caption': [0],
+    semi: [0, 'always'],
+  },
+};

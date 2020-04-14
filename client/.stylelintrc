@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-css-modules",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-order", "stylelint-declaration-block-no-ignored-properties"],
+  "rules": {
+    "font-family-no-missing-generic-family-keyword":"never",
+    "keyframe-declaration-no-important":null,
+    "block-no-empty":true,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "at-rule-no-unknown": null
+  }
+}

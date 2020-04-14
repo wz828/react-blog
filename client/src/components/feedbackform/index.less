@@ -1,0 +1,63 @@
+.form-item {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+
+  label {
+    display: block;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+
+  input {
+    height: 30px;
+    border-radius: 30px;
+  }
+
+  textarea {
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 15px;
+    line-height: 30px;
+    border: 1px solid lightgray;
+    outline: none;
+    transition: all 0.3s;
+    &:focus {
+      border: 1px solid #444;
+    }
+  }
+
+  button {
+    height: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    font-size: 14px;
+    line-height: 30px;
+    background-color: #444;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+  }
+}
+.textCount {
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+  color: #a1a1a1;
+  font-size: 16px;
+}
+
+.error {
+  color: #f00;
+  text-align: center;
+}

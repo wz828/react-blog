@@ -1,0 +1,176 @@
+@import '../../style/variables';
+
+.player {
+  position: fixed;
+  top: 80%;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  width: 540px;
+  height: 76px;
+  text-align: center;
+
+  &.active {
+    width: 100px;
+  }
+}
+
+.album {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+
+  &.active {
+    animation-play-state: running;
+  }
+
+  .icon {
+    position: absolute;
+    top: 32%;
+    left: 32%;
+    box-sizing: border-box;
+    width: 37%;
+    height: 37%;
+    padding: 0;
+    border-color: transparent transparent transparent rgba(31, 31, 31, 0.9);
+    border-style: solid;
+    border-width: 16px 0 16px 36px;
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      border-style: double;
+      border-width: 0 0 0 36px;
+    }
+  }
+
+  .cover {
+    position: absolute;
+    top: 11.5%;
+    left: 11.5%;
+    box-sizing: border-box;
+    width: 65px;
+    height: 65px;
+    border: 5px solid #000;
+    border-radius: 50%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  height: 32px;
+  text-align: center;
+
+  .time {
+    display: inline-block;
+    width: 40px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  input[type='range'] {
+    width: 200px;
+    height: 2px;
+    margin-top: 16px;
+    background: linear-gradient(
+      to right,
+      rgb(101, 101, 101),
+      rgb(101, 101, 101) 0%,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2)
+    );
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-thumb {
+      box-sizing: content-box;
+      width: 8px;
+      height: 8px;
+      background: rgb(31, 31, 31);
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+  }
+}
+
+.info-wrap {
+  display: flex;
+  align-items: center;
+
+  &.active {
+    display: none;
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 50px;
+  margin-right: 12px;
+  border-right: 1px solid rgba(172, 172, 172, 0.6);
+}
+
+.btn {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background-color: rgba(133, 133, 133, 0.3);
+  background-image: url('../../../asserts/arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  &.active {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .player {
+    width: 310px;
+
+    &.active {
+      transform: translateX(-80px);
+      opacity: 0.6;
+    }
+  }
+
+  .info-wrap {
+    flex-direction: column;
+  }
+
+  .info {
+    height: 30px;
+    margin-right: 0;
+    border-right: none;
+  }
+
+  .progress {
+    input[type='range'] {
+      width: 100px;
+    }
+  }
+}

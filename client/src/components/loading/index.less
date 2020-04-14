@@ -1,0 +1,72 @@
+@keyframes pointLoading {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0.5;
+  }
+}
+.delay(@n)when (@n<=8) {
+  animation-delay: 0.13s * (@n);
+}
+.point-loading {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  .point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(73, 73, 73);
+    border-radius: 50%;
+    animation: pointLoading 1s infinite;
+    &:nth-child(1) {
+      top: 50%;
+      left: 0;
+      margin-top: -10px;
+      .delay(1);
+    }
+    &:nth-child(2) {
+      top: 14px;
+      left: 14px;
+      .delay(2);
+    }
+    &:nth-child(3) {
+      top: 0;
+      left: 50%;
+      margin-left: -10px;
+      .delay(3);
+    }
+    &:nth-child(4) {
+      top: 14px;
+      right: 14px;
+      .delay(4);
+    }
+    &:nth-child(5) {
+      top: 50%;
+      right: 0;
+      margin-top: -10px;
+      .delay(5);
+    }
+    &:nth-child(6) {
+      right: 14px;
+      bottom: 14px;
+      .delay(6);
+    }
+    &:nth-child(7) {
+      bottom: 0;
+      left: 50%;
+      margin-left: -10px;
+      .delay(7);
+    }
+    &:nth-child(8) {
+      bottom: 14px;
+      left: 14px;
+      .delay(8);
+    }
+  }
+}

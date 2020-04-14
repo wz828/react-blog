@@ -1,0 +1,236 @@
+@import '../../style/variables';
+@import '../../style/index';
+
+.theme-bg {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-bottom: 10px;
+  &.blue-img {
+    background-image: url('../../../asserts/blue.jpg');
+  }
+
+  &.pink-img {
+    background-image: url('../../../asserts/pink.jpg');
+  }
+
+  &.green-img {
+    background-image: url('../../../asserts/green.jpg');
+  }
+  &.gray-img {
+    background-image: url('../../../asserts/gray.jpg');
+  }
+}
+.site-nav-toggle {
+  display: none;
+  button {
+    margin-top: 2px;
+    padding: 9px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    //border: 1px solid #999999;
+    user-select: none;
+    .btn-bar {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #666;
+      border-radius: 1px;
+      & + .btn-bar {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+.index-about {
+  i {
+    color: #444;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'italic' !important;
+  }
+
+  width: 100%;
+  margin-bottom: 40px;
+  padding-top: 45px;
+  text-align: center;
+  opacity: 0;
+  animation: showBlock @transitionTime * 4 forwards;
+}
+
+.index-about-mobile {
+  display: none;
+}
+
+.index-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1024px;
+  height: max-content;
+  margin: auto;
+  //min-height: calc(100vh - 190px);
+  .index-left {
+    width: 240px;
+  }
+  .index-middle {
+    flex: 1;
+    max-width: 784px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .index-container {
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    margin: auto;
+    padding: 0 40px 0 10px;
+    //min-height: calc(100vh - 190px);
+    .index-left {
+      width: 180px;
+    }
+    .index-middle {
+      flex: 1;
+      max-width: calc(100% - 180px);
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .index-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    margin: auto;
+    padding: 0 25px 0 25px;
+    .index-left {
+      width: 100%;
+    }
+    .index-middle {
+      flex: 1;
+      max-width: 100%;
+    }
+  }
+
+  .index-about {
+    display: none;
+  }
+
+  .index-about-mobile {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    i {
+      color: #444;
+      font-weight: 300;
+      font-size: 15px;
+      font-family: 'italic' !important;
+    }
+  }
+}
+
+// footer part:
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #979797;
+  p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
+    a {
+      color: #333;
+      font-weight: 300;
+      font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial,
+        sans-serif;
+      cursor: pointer;
+    }
+    span {
+      a {
+        color: #979797;
+        font-weight: 300;
+        font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial,
+          sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      a:hover {
+        color: #333;
+      }
+    }
+  }
+}
+
+.list-inline.text-center {
+  margin-bottom: 0;
+  padding-left: 0;
+  color: #444;
+  font-size: 20px;
+  li {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    text-align: center;
+    background-color: #979797;
+    border-radius: 12px;
+    a {
+      text-decoration: none;
+      span {
+        i {
+          color: white;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  li:hover {
+    background-color: #333;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .footer {
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-left: 20px;
+    p {
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-weight: 300;
+      font-size: 11px;
+      font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial,
+        sans-serif;
+      span {
+        a {
+          color: #979797;
+          font-weight: 300;
+          font-size: 11px;
+          font-family: 'Montserrat', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial,
+            sans-serif;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        a:hover {
+          color: #333;
+        }
+      }
+    }
+  }
+}

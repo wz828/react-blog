@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "components": ["./src/components/*"],
+      "container": ["./src/container/*"],
+      "utils/*": ["./src/utils/*"]
+    },
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true
+  }
+}

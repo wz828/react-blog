@@ -1,0 +1,27 @@
+{
+  "name": "my-react-blog-backend",
+  "version": "1.0.0",
+  "description": "the backend of my-react-blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development && node index.js",
+    "publish": "cross-env NODE_ENV=production && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "axios": "^0.18.0",
+    "front-matter": "^3.0.0",
+    "fs-extra": "^7.0.0",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "nodemailer": "^4.6.7"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

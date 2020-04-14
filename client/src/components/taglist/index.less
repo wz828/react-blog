@@ -1,0 +1,78 @@
+@import '../../style/variables';
+
+.tags {
+  margin-bottom: 25px;
+  line-height: 30px;
+  a {
+    margin-right: 15px;
+    color: #999;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #4a4a4a;
+  }
+  a::before {
+    content: '#';
+  }
+}
+
+.one-tag-list {
+  margin-bottom: 25px;
+  .fa-tag {
+    display: block;
+    margin-bottom: 15px;
+    color: #999;
+  }
+  .post-preview {
+    padding-left: 2em;
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      .post-title {
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: #101010;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: color @transitionTime;
+      }
+      .post-title:hover {
+        color: @link-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .one-tag-list {
+    margin-bottom: 25px;
+    .fa-tag {
+      display: block;
+      margin-bottom: 15px;
+      color: #999;
+    }
+    .post-preview {
+      padding-left: 2em;
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        .post-title {
+          margin-top: 0;
+          margin-bottom: 5px;
+          color: #4a4a4a;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 20px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: color @transitionTime;
+        }
+        .post-title:hover {
+          color: @link-color;
+        }
+      }
+    }
+  }
+}
